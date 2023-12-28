@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import './Prompt.css';
 
 export var Prompt = function Prompt(ref) {
-    const { content, title, width, theme, align, animation } = ref;
+    const { content, title, width, theme, align, animation, speed } = ref;
 
     const [displayedContent, setDisplayedContent] = useState('');
     const headerBlackColor = '#2d2d2d';
@@ -28,13 +28,13 @@ export var Prompt = function Prompt(ref) {
             for (let i = 0; i < content.length; i++) {
                 timeout = setTimeout(() => {
                     setDisplayedContent((prevContent) => prevContent + content[i]);
-                }, 50 * i);
+                }, speed * i);
             }
         }
         return () => {
             clearTimeout(timeout);
         };
-    }, [content, animation]);
+    }, [content, speed, animation]);
 
     return (
         <div className="prompt" style={promptStyles}>
@@ -60,6 +60,7 @@ Prompt.defaultProps = {
     width: 'auto',
     align: 'left',
     animation: 'none',
+    speed: 50
 };
 
 Prompt.propTypes = {
@@ -69,6 +70,7 @@ Prompt.propTypes = {
     width: PropTypes.string,
     align: PropTypes.oneOf(['left', 'right', 'center']),
     animation: PropTypes.oneOf(['none', 'right-show']),
+    speed: PropTypes.bigint
 };
 
 export default Prompt;

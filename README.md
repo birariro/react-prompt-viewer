@@ -24,15 +24,28 @@ class Component extends React.Component {
 
 ### expected
 
-<p align="center" >
-    <img src="https://github.com/birariro/react-prompt-viewer/blob/master/image/helloworld.png?raw=true"/>
+<p align="center"  >
+    <img style="max-width: 500px" src="https://github.com/birariro/react-prompt-viewer/blob/master/image/helloworld.png?raw=true"/>
 </p>
 
-```<Prompt content={content}  animation='right-show' />```
-<p align="center" >
-    <img src="https://github.com/birariro/react-prompt-viewer/blob/master/image/animation.gif?raw=true"/>
+```javascript
+<Prompt content={content}  animation='right-show' />
+```
+<p align="center">
+    <img style="max-width: 500px" src="https://github.com/birariro/react-prompt-viewer/blob/master/image/animation.gif?raw=true"/>
 </p>
 
+### props
+```javascript
+<Prompt content={"hello world"} 
+        width="200px" 
+        title={"prompt"} 
+        theme={"dark"} 
+        align={"center"} 
+        animation='right-show' 
+        speed={15}
+/>
+```
 
 
 [license-image]: http://img.shields.io/npm/l/react-prompt-viewer.svg
