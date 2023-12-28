@@ -1,13 +1,7 @@
-import './index.css';
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { BrowserRouter as Router } from 'react-router-dom';
-import App from './App';
+import React from "react";
+import ReactDOM from "react-dom";
+import Prompt from "./lib/Prompt";
 
-ReactDOM.render(
-    <Router>
-        <App />
-    </Router>,
-    document.getElementById('root')
-);
+const content = "hello world"
 
+ReactDOM.render(<Prompt content={content} width="200px" />, document.getElementById("root"));

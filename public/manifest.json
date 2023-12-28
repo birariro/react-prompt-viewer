@@ -1,6 +1,6 @@
 {
-  "short_name": "react-terminal",
-  "name": "react-terminal",
+  "short_name": "react-prompt",
+  "name": "react-prompt",
   "icons": [
     {
       "src": "favicon.ico",
