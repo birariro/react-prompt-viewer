@@ -1,6 +1,7 @@
 {
   "name": "react-prompt-viewer",
-  "version": "0.0.6",
+  "version": "0.0.7",
+  "license": "MIT",
   "description": "terminal style message box",
   "keywords": [
     "react",
